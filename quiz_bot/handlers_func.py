@@ -22,7 +22,7 @@ async def new_quiz(message):
     user_id = message.from_user.id
     questions = get_question_list(
         shuffle=True,  # перемешать вопросы
-        number=7  # сколько вопросов взять на квиз
+        # number=7  # сколько вопросов взять на квиз
     )
     current_question_index = 0
     current_score = 0
