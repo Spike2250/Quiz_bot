@@ -4,13 +4,21 @@ version = "0.1.0"
 description = ""
 authors = ["Shilov Ilia <shilov.spike2250@yandex.ru>"]
 readme = "README.md"
+packages = [
+  { include = "quiz_bot" },
+]
 
 [tool.poetry.dependencies]
 python = "^3.12"
 aiogram = "^3.8.0"
 python-dotenv = "^1.0.1"
+aiosqlite = "^0.20.0"
+prettytable = "^3.10.0"
 
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+start = "quiz_bot.scripts.start:main"
